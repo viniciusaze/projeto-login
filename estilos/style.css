@@ -39,9 +39,13 @@ section#login {
     border: 1px solid rgba(0, 0, 0, 0.404);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
 
+    transition: width 0.6s, height 0.6s; /* Para ter uma animação na hora de trocar a midia */
+    transition-timing-function: ease; /* Para dar uma suavizada na animação */
+
 }
 
 section#login > div#imagem {
+    display: block; /*Para colocar a imagem e o formulario lado a lado nas outras midias*/
     background: #5f2c82 url(../imagens/build.jpg) no-repeat;
     height: 200px;
     background-size: cover;
@@ -50,15 +54,20 @@ section#login > div#imagem {
 }
 
 section#login > div#form {
+    display: block; /*Para colocar a imagem e o formulario lado a lado nas outras midias*/
     padding: 10px;
 }
 
 section#login > div#form > h1{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 section#login > div#form > p{
     font-size: 0.8em;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+form{
+    text-align: center;
 }
