@@ -29,7 +29,7 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     overflow: hidden; /* para conter tudo dentro da borda (imagem arredendou)*/
 
     background-color: white;
@@ -41,7 +41,7 @@ section#login {
 
     transition: width 0.6s, height 0.6s; /* Para ter uma animação na hora de trocar a midia */
     transition-timing-function: ease; /* Para dar uma suavizada na animação */
-
+    transform: translate(-50%, -50%); /* Sempre que tiver uma transformação ou transição, deixar ela na ultima linha do seletor */
 }
 
 section#login > div#imagem {
@@ -72,8 +72,9 @@ form > div.campo {
     background-color: #5f2c82;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
+    border: 2px solid #5f2c82
 }
 
 div.campo > label{
@@ -82,12 +83,25 @@ div.campo > label{
 
 div.campo > span{
     color: #49a09d;
-    font-size: 1.8em;
-    padding-top: 3px;
+    font-size: 2em;
+    width: 40px;
+    padding-top: 5px;
 }
 
-div.campo > input[type=email]{
-    margin-bottom: 10px;
+div.campo > input {
+    background-color: #6ce7e3;
+    font-size: 1em;
+    height: 100%;
+    width: calc(100% - 45px);
+    
+    border: 0px;
+    border-radius: 8px;
+    transform: translateY(-12px); /* Sempre que tiver uma transformação ou transição , deixar ela na ultima linha do seletor */
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+    border: none;
 }
 
 form> input[type=submit] {
@@ -98,7 +112,7 @@ form> input[type=submit] {
     background-color:#49a09d ;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 form> input[type=submit]:hover{
@@ -114,7 +128,7 @@ form > a.botao {
     height: 40px;
     background-color: #275755;
     color:white;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     border: 1px solid #49a09d;
     padding-top : 10px;
