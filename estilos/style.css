@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    Verde: #49a09d
+    Lilás: #5f2c82
+*/
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color:#5f2c82 ;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    overflow: hidden; /* para conter tudo dentro da borda (imagem arredendou)*/
+
+    background-color: white;
+    width: 250px;
+    height: 520px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+
+    transition: width 0.6s, height 0.6s; /* Para ter uma animação na hora de trocar a midia */
+    transition-timing-function: ease; /* Para dar uma suavizada na animação */
+    transform: translate(-50%, -50%); /* Sempre que tiver uma transformação ou transição, deixar ela na ultima linha do seletor */
+}
+
+section#login > div#imagem {
+    display: block; /*Para colocar a imagem e o formulario lado a lado nas outras midias*/
+    background: #5f2c82 url(../imagens/build.jpg) no-repeat;
+    height: 200px;
+    background-size: cover;
+    background-position: center left;
+
+}
+
+section#login > div#form {
+    display: block; /*Para colocar a imagem e o formulario lado a lado nas outras midias*/
+    padding: 10px;
+}
+
+section#login > div#form > h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#login > div#form > p{
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+form > div.campo {
+    background-color: #5f2c82;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+    border: 2px solid #5f2c82
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    color: #49a09d;
+    font-size: 2em;
+    width: 40px;
+    padding-top: 5px;
+}
+
+div.campo > input {
+    background-color: #6ce7e3;
+    font-size: 1em;
+    height: 100%;
+    width: calc(100% - 45px);
+    
+    border: 0px;
+    border-radius: 8px;
+    transform: translateY(-12px); /* Sempre que tiver uma transformação ou transição , deixar ela na ultima linha do seletor */
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+    border: none;
+}
+
+form> input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color:#49a09d ;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+form> input[type=submit]:hover{
+    background-color: #132b29;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form > a.botao {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #275755;
+    color:white;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid #49a09d;
+    padding-top : 10px;
+    margin-top: 5px;
+    
+}
+
+form > a.botao > span{
+    font-size: 0.8em;
+}
+
+form > a.botao:hover{
+    background-color: #6ce7e3;
+    color: black;
+    transition: 0.3s;
+}
+
+form{
+    text-align: center;
+}
